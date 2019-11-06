@@ -69,4 +69,31 @@ function calcAverageProductPrice(arrayOfProducts: Product[]): number {
 const myAveragePrice: number = calcAverageProductPrice(products);
 console.log(myAveragePrice);
 
+// Inventory Section
+// InventoryItem interface declaration
+interface InventoryItem {
+  product: Product;
+  quantity: number;
+}
+
+// inventory array of InventoryItems
+const inventory: InventoryItem[] = [
+  { product: { name: "motor", price: 10.00 }, quantity: 10 },
+  { product: { name: "sensor", price: 12.50 }, quantity: 4 },
+  { product: { name: "LED", price: 1.00 }, quantity: 20 },
+];
+
+// calcInventoryValue function
+function calcInventoryValue(arrayOfInventoryItems: InventoryItem[]): number {
+  let totalValueOfInventory: number = 0;
+  for (const oneItem of arrayOfInventoryItems) {
+    totalValueOfInventory += oneItem.product.price * oneItem.quantity;
+  }
+
+  return totalValueOfInventory;
+}
+
+const inventoryValue: number = calcInventoryValue(inventory);
+console.log(inventoryValue);
+
 // export const mountainsTest = mountains;
