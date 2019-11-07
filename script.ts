@@ -46,7 +46,7 @@ let products: Product[] = [
   { name: "shampoo", price: 5 },
   { name: "conditioner", price: 6 },
   { name: "gel", price: 10 },
-  { name: "lotion", price: 9 }
+  { name: "lotion", price: 19 }
 ];
 
 // calcAverageProductPrice function declaration
